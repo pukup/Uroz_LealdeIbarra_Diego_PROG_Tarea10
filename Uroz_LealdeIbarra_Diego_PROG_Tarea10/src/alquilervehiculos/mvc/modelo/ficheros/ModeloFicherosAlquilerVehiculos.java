@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package alquilervehiculos.mvc.modelo;
+package alquilervehiculos.mvc.modelo.ficheros;
 
-import alquilervehiculos.mvc.modelo.dao.Alquileres;
-import alquilervehiculos.mvc.modelo.dao.Clientes;
-import alquilervehiculos.mvc.modelo.dao.Vehiculos;
+import alquilervehiculos.mvc.modelo.ficheros.dao.Alquileres;
+import alquilervehiculos.mvc.modelo.ficheros.dao.Clientes;
+import alquilervehiculos.mvc.modelo.ficheros.dao.Vehiculos;
 import alquilervehiculos.mvc.modelo.dominio.Alquiler;
 import alquilervehiculos.mvc.modelo.dominio.Cliente;
 import alquilervehiculos.mvc.modelo.dominio.vehiculo.Vehiculo;
@@ -17,14 +17,14 @@ import java.util.List;
  *
  * @author lol
  */
-public class ModeloAlquilerVehiculos implements IModeloAlquilerVehiculos
+public class ModeloFicherosAlquilerVehiculos implements IModeloFicherosAlquilerVehiculos
 {
 
     private Clientes clientes;
     private Vehiculos vehiculos;
     private Alquileres alquileres;
 
-    public ModeloAlquilerVehiculos()
+    public ModeloFicherosAlquilerVehiculos()
     {
         vehiculos = new Vehiculos();
         clientes = new Clientes();

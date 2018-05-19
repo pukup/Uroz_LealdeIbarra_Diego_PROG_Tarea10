@@ -5,12 +5,12 @@
  */
 package alquilervehiculos.mvc.controlador;
 
-import alquilervehiculos.mvc.modelo.IModeloAlquilerVehiculos;
 import alquilervehiculos.mvc.modelo.dominio.Alquiler;
 import alquilervehiculos.mvc.modelo.dominio.Cliente;
 import alquilervehiculos.mvc.modelo.dominio.vehiculo.Vehiculo;
 import alquilervehiculos.mvc.vista.IVistaAlquilerVehiculos;
 import java.util.List;
+import alquilervehiculos.mvc.modelo.ficheros.IModeloFicherosAlquilerVehiculos;
 
 /**
  *
@@ -19,10 +19,10 @@ import java.util.List;
 public class ControladorAlquilerVehiculos implements IControladorAlquilerVehiculos
 {
 
-    public IModeloAlquilerVehiculos modelo;
+    public IModeloFicherosAlquilerVehiculos modelo;
     private IVistaAlquilerVehiculos vista;
 
-    public ControladorAlquilerVehiculos(IModeloAlquilerVehiculos modelo, IVistaAlquilerVehiculos vista)
+    public ControladorAlquilerVehiculos(IModeloFicherosAlquilerVehiculos modelo, IVistaAlquilerVehiculos vista)
     {
         this.modelo = modelo;
         this.vista = vista;

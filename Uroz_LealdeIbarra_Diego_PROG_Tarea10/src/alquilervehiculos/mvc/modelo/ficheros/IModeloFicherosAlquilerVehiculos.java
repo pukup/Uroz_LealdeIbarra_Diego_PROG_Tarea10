@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package alquilervehiculos.mvc.modelo;
+package alquilervehiculos.mvc.modelo.ficheros;
 
 import alquilervehiculos.mvc.modelo.dominio.Alquiler;
 import alquilervehiculos.mvc.modelo.dominio.Cliente;
@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author lol
  */
-public interface IModeloAlquilerVehiculos
+public interface IModeloFicherosAlquilerVehiculos
 {
 
     List <Alquiler> obtenerAlquileres();
