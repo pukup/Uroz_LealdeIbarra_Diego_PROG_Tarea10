@@ -12,12 +12,13 @@ import alquilervehiculos.mvc.modelo.dominio.Alquiler;
 import alquilervehiculos.mvc.modelo.dominio.Cliente;
 import alquilervehiculos.mvc.modelo.dominio.vehiculo.Vehiculo;
 import java.util.List;
+import alquilervehiculos.mvc.modelo.IModeloAlquilerVehiculos;
 
 /**
  *
  * @author lol
  */
-public class ModeloFicherosAlquilerVehiculos implements IModeloFicherosAlquilerVehiculos
+public class ModeloFicherosAlquilerVehiculos implements IModeloAlquilerVehiculos
 {
 
     private Clientes clientes;

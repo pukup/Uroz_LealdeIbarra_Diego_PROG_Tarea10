@@ -5,12 +5,10 @@
  */
 package alquilervehiculos.mvc.vista.grafica.vehicles;
 
-import alquilervehiculos.mvc.modelo.dominio.Cliente;
 import alquilervehiculos.mvc.modelo.dominio.ExcepcionAlquilerVehiculos;
 import alquilervehiculos.mvc.modelo.dominio.vehiculo.Vehiculo;
 import alquilervehiculos.mvc.vista.grafica.JavaFXMainStage;
 import alquilervehiculos.mvc.vista.grafica.Mensajes;
-import alquilervehiculos.mvc.vista.grafica.clients.clientsrents.FXMLClientsRentsController;
 import alquilervehiculos.mvc.vista.grafica.vehicles.vehiclesrents.FXMLVehiclesRentsController;
 import java.io.IOException;
 import javafx.collections.FXCollections;
@@ -71,6 +69,7 @@ public class FXMLVehiclesSearchController
             JavaFXMainStage.controlador.modelo.escribirVehiculos();
             Mensajes.mostrarInfo("Vehiculos", "Eliminado.");
             listarVehiculos();
+            clearTextFields();
         } else if (event.getSource() == btn_cancel)
         {
             loadScene(event, "../FXMLTopBar.fxml");
@@ -87,6 +86,17 @@ public class FXMLVehiclesSearchController
         tFNumeroP.setText(String.valueOf(vehiculo.getDatosTecnicos().getNumeroPlazas()));
         tFPma.setText(String.valueOf(vehiculo.getDatosTecnicos().getPma()));
     }
+    
+        private void clearTextFields()
+    {
+        tFDisponible.setText("");
+        tFMarca.setText("");
+        tFModelo.setText("");
+        tFMatricula.setText("");
+        tFCilindrada.setText("");
+        tFNumeroP.setText("");
+        tFPma.setText("");
+    }
 
     private void loadScene(ActionEvent event, String fxmlString) throws IOException
     {
@@ -96,9 +106,9 @@ public class FXMLVehiclesSearchController
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         moveScene(root1, stage);
         stage.setScene(scene1);
-        stage.show();        
+        stage.show();
     }
-    
+
     public void showVehiclesRents(ActionEvent event, Vehiculo vehiculo) throws IOException
     {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("vehiclesrents/FXMLVehiclesRents.fxml"));

@@ -68,6 +68,8 @@ public class FXMLClientSearchController
             JavaFXMainStage.controlador.modelo.escribirClientes();
             Mensajes.mostrarInfo("Clientes", "Eliminado.");
             listarClientes();
+            clearTextFields();
+
         } else if (event.getSource() == btn_cancel)
         {
             loadScene(event, "../FXMLTopBar.fxml");
@@ -146,6 +148,16 @@ public class FXMLClientSearchController
         tFCalle.setText(cliente.getDireccionPostal().getCalle());
         tFLocalidad.setText(cliente.getDireccionPostal().getLocalidad());
         tFCodigoP.setText(cliente.getDireccionPostal().getCodigoPostal());
+    }
+
+    private void clearTextFields()
+    {
+        tFId.setText("");
+        tFNombre.setText("");
+        tFDni.setText("");
+        tFCalle.setText("");
+        tFLocalidad.setText("");
+        tFCodigoP.setText("");
     }
 
     /**

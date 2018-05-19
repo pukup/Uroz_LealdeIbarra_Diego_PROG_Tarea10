@@ -10,7 +10,7 @@ import alquilervehiculos.mvc.controlador.IControladorAlquilerVehiculos;
 import alquilervehiculos.mvc.modelo.ficheros.ModeloFicherosAlquilerVehiculos;
 import alquilervehiculos.mvc.vista.IVistaAlquilerVehiculos;
 import alquilervehiculos.mvc.vista.grafica.JavaFXMainStage;
-import alquilervehiculos.mvc.modelo.ficheros.IModeloFicherosAlquilerVehiculos;
+import alquilervehiculos.mvc.modelo.IModeloAlquilerVehiculos;
 
 /**
  *
@@ -21,7 +21,7 @@ public class PrincipalGrafica
 
     public static void main(String[] args)
     {
-        IModeloFicherosAlquilerVehiculos modelo = new ModeloFicherosAlquilerVehiculos();
+        IModeloAlquilerVehiculos modelo = new ModeloFicherosAlquilerVehiculos();
         IVistaAlquilerVehiculos vista = new JavaFXMainStage();
         IControladorAlquilerVehiculos controlador = new ControladorAlquilerVehiculos(modelo, vista);
 

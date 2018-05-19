@@ -10,7 +10,7 @@ import alquilervehiculos.mvc.modelo.dominio.Cliente;
 import alquilervehiculos.mvc.modelo.dominio.vehiculo.Vehiculo;
 import alquilervehiculos.mvc.vista.IVistaAlquilerVehiculos;
 import java.util.List;
-import alquilervehiculos.mvc.modelo.ficheros.IModeloFicherosAlquilerVehiculos;
+import alquilervehiculos.mvc.modelo.IModeloAlquilerVehiculos;
 
 /**
  *
@@ -19,10 +19,10 @@ import alquilervehiculos.mvc.modelo.ficheros.IModeloFicherosAlquilerVehiculos;
 public class ControladorAlquilerVehiculos implements IControladorAlquilerVehiculos
 {
 
-    public IModeloFicherosAlquilerVehiculos modelo;
+    public IModeloAlquilerVehiculos modelo;
     private IVistaAlquilerVehiculos vista;
 
-    public ControladorAlquilerVehiculos(IModeloFicherosAlquilerVehiculos modelo, IVistaAlquilerVehiculos vista)
+    public ControladorAlquilerVehiculos(IModeloAlquilerVehiculos modelo, IVistaAlquilerVehiculos vista)
     {
         this.modelo = modelo;
         this.vista = vista;
