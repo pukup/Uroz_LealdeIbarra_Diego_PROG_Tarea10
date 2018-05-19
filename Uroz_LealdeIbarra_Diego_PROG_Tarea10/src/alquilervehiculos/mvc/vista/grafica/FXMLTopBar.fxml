@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="355.37" prefWidth="575.0" style="-fx-background-color: TRANSPARENCY;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alquilervehiculos.mvc.vista.grafica.FXMLTopBarController">
+   <children>
+      <AnchorPane id="topBar" prefHeight="100.0" prefWidth="575.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <ImageView fx:id="img_clients" fitHeight="114.0" fitWidth="119.0" layoutX="32.0" layoutY="-5.0" onMousePressed="#handleBarButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/group.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_vehicles" fitHeight="83.0" fitWidth="83.0" layoutX="247.0" layoutY="10.0" onMousePressed="#handleBarButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/transport.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_rents" fitHeight="83.0" fitWidth="83.0" layoutX="447.0" layoutY="10.0" onMousePressed="#handleBarButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/glass.png" />
+               </image>
+            </ImageView>
+            <ImageView id="btn_door" fx:id="img_door" fitHeight="26.0" fitWidth="30.0" layoutX="554.0" layoutY="3.0" onMousePressed="#handleBarButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/door.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="vehicle" fx:id="v_vehicles" layoutY="126.0" onDragDetected="#handleBarButtonAction" prefHeight="234.0" prefWidth="575.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="272.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/arrow-up.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btn_v_new" layoutX="130.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleScreenButtonsAction" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #3D4970;" text="NUEVO" textFill="#fffefe">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_v_search" layoutX="360.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleScreenButtonsAction" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #3D4970;" text="BUSCAR" textFill="#fffefe">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="rents" fx:id="v_rents" layoutY="126.0" onDragDetected="#handleBarButtonAction" prefHeight="234.0" prefWidth="575.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="480.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/arrow-up.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btn_r_new" layoutX="130.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleScreenButtonsAction" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #3D4970;" text="NUEVO" textFill="#fffefe">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_r_search" layoutX="360.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleScreenButtonsAction" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #3D4970;" text="BUSCAR" textFill="#fffefe">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="clients" fx:id="v_clients" layoutY="127.0" onDragDetected="#handleBarButtonAction" prefHeight="234.0" prefWidth="575.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="70.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/arrow-up.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btn_c_new" layoutX="130.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleScreenButtonsAction" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #3D4970;" text="NUEVO" textFill="#fffefe">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_c_search" layoutX="360.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleScreenButtonsAction" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #3D4970;" text="BUSCAR" textFill="#fffefe">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
